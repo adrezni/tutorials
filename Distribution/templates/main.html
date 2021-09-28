@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h2>Distribution Demo</h2>
+    </div>
+    <div class="mainContainer">
+        <p class="mainImageContainer">
+            <img src="{{ url_for('static', filename='distributions2.png') }}" class="mainImage">
+        </p>
+        <form  id="mainForm" method="post">
+            <div class="radioContainer" id="radioContainer">
+                <p>
+                    <h3>Choose Distribution Type</h3>
+                </p>
+                <p class="radioP">
+                    <input type="radio" id="uniformDist" name="graphType" value="1"  >
+                    <label for="uniformDist" >Uniform Distribution</label>
+                </p>
+                <p class="radioP">
+                    <input type="radio" id="normalDist" name="graphType" value="2" >
+                    <label for="normalDist">Normal Distribution</label>
+                </p>
+                <p class="radioP">
+                    <input type="radio" id="gammaDist" name="graphType" value="3" >
+                    <label for="gammaDist">Gamma Distribution</label>
+                </p>
+                <p class="radioP">
+                    <input type="radio" id="poissonDist" name="graphType" value="4" >
+                    <label for="poissonDist">Poisson Distribution</label>
+                </p>
+            </div>
+            <div id="inputDiv" name="inputDiv" class="inputContainer">
+                <span id="sizeSpan" class="inputSpan"  style = "display: block">
+                    <label for="size">Number of Random Variates</label>
+                    <input type="text" id="size" name="size" value="10000">
+                </span>
+                <span id="startSpan" style="display: none" class="inputSpan">
+                    <label for="start">Start</label>
+                    <input type="text" id="start" name="start" value="10" >
+                </span>
+                <span id="widthSpan" style="display: none" class="inputSpan">
+                    <label for="width">Width</label>
+                    <input type="text" id="width" name="width" value="20" >
+                </span>
+                <span id="locSpan" style="display: none" class="inputSpan">
+                    <label for="loc">Mean of Distribution</label>
+                    <input type="text" id="loc"name="loc" value="0">
+                </span>
+                <span id="stdevSpan" style="display: none" class="inputSpan">
+                    <label for="scale">Standard Deviation</label>
+                    <input type="text" id="scale" name="scale" value="1" >
+                </span>
+                <span id="shapeSpan" style="display: none" class="inputSpan">
+                    <label for="shape">Shape</label>
+                    <input type="text" id="shape" name="shape" value="5" >
+                </span>
+                <p></p><p></p>
+                <p>
+                    <input type="button" value="Make Graph" class="button" id="makeGraphBtn" >
+                </p>
+
+
+            </div>
+        </form>
+        <div id="graphContainer" class="graphContainer" >
+
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='mainFunctionality.js') }}" charset="utf-8"></script>
+</body>
+</html>
