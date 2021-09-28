@@ -1,1 +1,1 @@
-A simple Flask web app that has an interactive user interface and uses a data science class that builds a neural net and generates graphs of cross-entropy loss as well as accuracy of testing and training.
+A simple Flask web app that has an interactive user interface and uses API from a data science class that builds a neural net and generates graphs of cross-entropy loss as well as accuracy of testing and training.
