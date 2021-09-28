@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='mainStyle.css') }}">
+    <title>ImageDemo</title>
+</head>
+<body>
+    <div>
+        <p>
+            <h2>Image Read Demo</h2>
+        </p>
+        <form id="mainForm" method="get">
+            <p>
+                <h3>Press button to get image</h3>
+            </p>
+            <p>
+                <input type="button" value="Display Image" id="displayImageBtn">
+            </p>
+        </form>
+    </div>
+    <div id = 'imageDivContainer'>
+    </div>
+<script src="{{ url_for('static', filename='mainFunctionality.js') }}" charset="utf-8"></script>
+</body>
+</html>
