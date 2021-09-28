@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h2>Learning Rate Demo</h2>
+    </div>
+    <div class="mainContainer">
+        <p class="mainImageContainer">
+            <img src="{{ url_for('static', filename='distributions2.png') }}" class="mainImage">
+        </p>
+        <form  id="mainForm" method="post">
+            <div id="inputDiv" name="inputDiv" class="inputContainer">
+                    <label for="size">Sample Size</label>
+                    <input type="text" id="size" name="size" value="1000"><br>
+                    <label for="learningRate">Learning Rate</label>
+                    <input type="text" id="learningRate" name="learningRate" value="0.01" ><br>
+                    <label for="nodes">Number of Nodes</label>
+                    <input type="text" id="nodes"name="nodes" value="8"><br>
+                    <label for="epochs">Number of Epochs</label>
+                    <input type="text" id="epochs" name="epochs" value="200" ><br>
+                <p></p><p></p>
+                <p>
+                    <input type="button" value="Make Graph" class="button" id="makeGraphBtn" >
+                </p>
+            </div>
+        </form>
+        <div id="graphContainer" class="graphContainer" >
+
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='mainFunctionality.js') }}" charset="utf-8"></script>
+</body>
+</html>
